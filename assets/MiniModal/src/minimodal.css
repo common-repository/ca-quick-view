@@ -1,0 +1,48 @@
+.minimodal-overlay {
+    position: fixed;
+    background: #00000099;
+    top: -500px;
+    left: -500px;
+    width: 5000px;
+    height: 5000px;
+    z-index: 1450;
+    display: none;
+}
+
+.minimodal-overlay.minimodal-opened{display: block;}
+.minimodal-wrapper.minimodal-opened{display: block;}
+.minimodal-wrapper {
+    background: white;
+    position: fixed;
+    z-index: 1455;
+    width: 1000px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 95%;
+    max-height: fit-content;
+    display: none;
+    border: 8px solid #ffffff52;
+    overflow: hidden;
+    box-shadow: 1px 3px 9px 0 #1919195c;
+}
+/* Media query for screens with a maximum width of 767px (typical mobile devices) */
+@media (max-width: 767px) {
+    .minimodal-wrapper {
+        overflow: auto;
+        height: fit-content !important;
+        max-height: 85% !important;
+    }
+}
+.minimodal-container{}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.minimodal-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .minimodal-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
